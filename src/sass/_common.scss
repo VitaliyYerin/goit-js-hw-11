@@ -1,1 +1,93 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  padding-top: 70px;
+}
+
+form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #34349d;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+  input {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    padding: 2px 5px;
+  }
+  button {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+  }
+  input, button {
+    border: none;
+    line-height: 1.75;
+  }
+  input:focus, button:focus {
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+    border: none;
+  }
+}
+
+.gallery {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  .photo-card {
+    position: relative;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 0;
+    width: 24.25%;
+    box-shadow: rgba(60, 64, 67, 30%) 0px 1px 2px 0px, rgba(60, 64, 67, 15%) 0px 1px 3px 1px;
+    &:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+    img {
+      width: 100%;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+    &:hover {
+      img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
+
+.load-more {
+  display: none;
+  margin: 10px auto 15px;
+}
