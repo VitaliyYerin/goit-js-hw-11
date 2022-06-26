@@ -90,4 +90,13 @@ form {
 .load-more {
   display: none;
   margin: 10px auto 15px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #34349d;
+  border: none;
+  padding: 10px 15px;
+  &:hover {
+    background-color: #21217d;
+    cursor: pointer;
+  }
 }
